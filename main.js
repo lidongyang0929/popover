@@ -1,8 +1,13 @@
 $(clickMe).on('click',function(){
-    $(popover).show()
+    if(popover.style.display === 'none'){
+        $(popover).show()
+        
+    }else if(popover.style.display ==='block'){
+       $(popover).hide()
+    }
     $(document).one('click',function(){
         $(popover).hide()
     })
+   
 })
-
 $(wrapper).on('click',false)
